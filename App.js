@@ -9,6 +9,7 @@ import { useRef } from "react";
 import { GestureHandlerRootView } from "react-native-gesture-handler";
 import { Provider as PaperProvider } from "react-native-paper";
 import { lightTheme } from "./src/theme/theme";
+import "./global.css";
 
 export default function App() {
   const navigationRef = useRef(null);
