@@ -6,6 +6,7 @@ import {
   Platform,
   ToastAndroid,
   Alert,
+  ScrollView,
 } from "react-native";
 import { Ionicons } from "@expo/vector-icons";
 import * as Clipboard from "expo-clipboard";
@@ -57,8 +58,16 @@ export default function ScreenWrapper({ children }) {
           <Ionicons name="settings-outline" size={24} color="white" />
         </TouchableOpacity>
       </View>
-
-      {children}
+      <ScrollView
+        className="mb-24"
+        contentContainerStyle={{
+          paddingBottom: 40,
+          rowGap: 30,
+        }}
+        showsVerticalScrollIndicator={false}
+      >
+        {children}
+      </ScrollView>
     </View>
   );
 }
