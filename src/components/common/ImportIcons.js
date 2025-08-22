@@ -5,6 +5,8 @@ import ACCOUNTS_ICON from "./../../assets/homeScreen/ACCOUNTS.svg";
 import ADD_ICON from "./../../assets/homeScreen/ADD.svg";
 import GROWTH_ICON from "./../../assets/homeScreen/Growth.svg";
 import PROFILE_IMAGE from "./../../assets/homeScreen/ProfileImage.svg";
+import CANDELSTICK_IMAGE from "./../../assets/homeScreen/CANDELSTICK.svg";
+import DOLLAR_IMAGE from "./../../assets/homeScreen/DOLLAR.svg";
 
 export {
   GET_FUND_ICON,
@@ -14,4 +16,6 @@ export {
   ADD_ICON,
   GROWTH_ICON,
   PROFILE_IMAGE,
+  CANDELSTICK_IMAGE,
+  DOLLAR_IMAGE,
 };
