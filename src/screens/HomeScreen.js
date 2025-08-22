@@ -9,9 +9,9 @@ export default function HomeScreen() {
   return (
     <ScreenWrapper>
       <ScrollView
-        className="flex-1"
+        className="mb-24"
         contentContainerStyle={{
-          paddingBottom: 20,
+          paddingBottom: 40,
           rowGap: 30,
         }}
         showsVerticalScrollIndicator={false}

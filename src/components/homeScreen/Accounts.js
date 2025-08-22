@@ -2,7 +2,6 @@ import { View } from "react-native";
 import SectionHeader from "../common/SectionHeader";
 import EmptyListView from "../common/EmptyListView";
 import AccountCard from "../accountsScreen/AccountCard";
-import { CANDELSTICK_IMAGE, DOLLAR_IMAGE } from "../common/ImportIcons";
 
 export default function Accounts() {
   return (
@@ -20,8 +19,8 @@ export default function Accounts() {
           subtitle="Live account"
           description="Deposit and trade profits"
           colors={["#4E3368", "#30124D"]}
-          icon={<CANDELSTICK_IMAGE height={75} width={75} />}
-          titleWidthClass={"w-[60%]"}
+          icon={require("./../../assets/homeScreen/CANDELSTICK.png")}
+          titleWidthClass={"w-[70%]"}
         />
 
         <AccountCard
@@ -30,8 +29,8 @@ export default function Accounts() {
           subtitle="Demo"
           description="Trade with virtual capital"
           colors={["#20112E", "#674588"]}
-          icon={<DOLLAR_IMAGE height={65} width={65} />}
-          titleWidthClass={"w-[45%]"}
+          icon={require("./../../assets/homeScreen/DOLLAR.png")}
+          titleWidthClass={"w-[70%]"}
         />
       </View>
     </View>

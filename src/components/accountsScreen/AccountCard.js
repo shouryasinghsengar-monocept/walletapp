@@ -1,5 +1,5 @@
 import React from "react";
-import { View, Text, TouchableOpacity } from "react-native";
+import { View, Text, TouchableOpacity, Image } from "react-native";
 import { LinearGradient } from "expo-linear-gradient";
 
 const AccountCard = ({
@@ -17,7 +17,7 @@ const AccountCard = ({
   return (
     <TouchableOpacity
       activeOpacity={0.8}
-      className="flex-1 w-48 h-30"
+      className="w-[50%] h-30"
       onPress={handleOnPress}
     >
       <LinearGradient
@@ -29,13 +29,17 @@ const AccountCard = ({
           padding: 16,
         }}
       >
-        <View className="flex-row justify-between items-center mb-3">
+        <View className="flex-row justify-between items-center mb-3 relative">
           <Text className="text-gray-300 text-xs">
             {type === "pro" ? "*For Pro Traders" : "*For Beginners"}
           </Text>
-          <View className="absolute right-[-15] top-[-15] rotate-[19deg] size-16 ">
-            {icon}
-          </View>
+
+          {/* Positioned Image */}
+          <Image
+            source={icon} // or {icon} if it's passed as a prop
+            className="absolute right-[-15px] top-[-15px] rotate-[19deg] w-16 h-16"
+            resizeMode="contain"
+          />
         </View>
 
         <View className="mb-2 ">
