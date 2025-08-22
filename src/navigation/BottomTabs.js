@@ -7,6 +7,7 @@ import ToolsScreen from "../screens/ToolsScreen";
 import AccountsScreen from "../screens/AccountsScreen";
 import FundsScreen from "../screens/FundsScreen";
 import GROWTH_ICON from "../assets/homeScreen/Growth.svg";
+import Analytics from "../screens/Analytics";
 
 const Tab = createBottomTabNavigator();
 
@@ -101,7 +102,7 @@ export default function BottomTabs() {
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Tools" component={ToolsScreen} />
-      <Tab.Screen name="Analytics" component={HomeScreen} />
+      <Tab.Screen name="Analytics" component={Analytics} />
       <Tab.Screen name="Skip" component={HomeScreen} />
       <Tab.Screen name="Accounts" component={AccountsScreen} />
       <Tab.Screen name="Funds" component={FundsScreen} />
