@@ -26,7 +26,7 @@ export default function ScreenWrapper({ children }) {
 
   return (
     <View className={`flex-1 bg-[#0e0e0e]  `}>
-      <View className="flex-row items-center justify-between mt-6 px-8">
+      <View className="flex-row items-center justify-between mt-6 px-8 pb-6">
         <View className="flex-row items-center">
           <View className="w-35 h-35 rounded-full">
             <PROFILE_PIC height={35} width={35} />
