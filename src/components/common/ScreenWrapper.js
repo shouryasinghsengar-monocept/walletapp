@@ -12,7 +12,7 @@ import { Ionicons } from "@expo/vector-icons";
 import * as Clipboard from "expo-clipboard";
 import PROFILE_PIC from "../../assets/homeScreen/ProfileImage.svg";
 
-export default function ScreenWrapper({ children }) {
+export default function ScreenWrapper({ children, scrollEnabled = true }) {
   const userId = "A232121u";
 
   const copyToClipboard = async () => {
@@ -65,6 +65,7 @@ export default function ScreenWrapper({ children }) {
           rowGap: 30,
         }}
         showsVerticalScrollIndicator={false}
+        scrollEnabled={scrollEnabled}
       >
         {children}
       </ScrollView>
