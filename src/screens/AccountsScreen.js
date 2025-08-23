@@ -5,9 +5,12 @@ import SegmentedControl from "../components/common/SegmentedControl";
 import { useState } from "react";
 import { Ionicons } from "@expo/vector-icons";
 import EmptyListView from "../components/common/EmptyListView";
+import AccountsCreationModal from "../components/accountsScreen/AccountsCreationModal";
 
 export default function AccountsScreen() {
   const [selected, setSelected] = useState("Real");
+  const [openAccountCreationModal, setOpenAccountCreationModal] =
+    useState(false);
 
   return (
     <ScreenWrapper>
@@ -30,7 +33,14 @@ export default function AccountsScreen() {
             className="flex-1 ml-2 text-white"
           />
         </View>
-        <EmptyListView actionLinkText={"+ Create a new account"} />
+        <EmptyListView
+          actionLinkText={"+ Create a new account"}
+          handleAction={() => setOpenAccountCreationModal(true)}
+        />
+        <AccountsCreationModal
+          visible={openAccountCreationModal}
+          setVisible={setOpenAccountCreationModal}
+        />
       </View>
     </ScreenWrapper>
   );
