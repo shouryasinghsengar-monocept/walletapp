@@ -1,15 +1,20 @@
 import { View } from "react-native";
+import { useState } from "react";
 import SectionHeader from "../common/SectionHeader";
 import EmptyListView from "../common/EmptyListView";
 import AccountCard from "../accountsScreen/AccountCard";
+import AccountsCreationMoal from "./../accountsScreen/AccountsCreationModal";
 
 export default function Accounts() {
+  const [openAccountCreationModal, setOpenAccountCreationModal] =
+    useState(false);
+
   return (
     <View className="px-8">
       <SectionHeader
         title="Accounts"
         rightText="Create a new account"
-        onRightTextPress={() => console.log("Create a new account tapped")}
+        onRightTextPress={() => setOpenAccountCreationModal(true)}
       />
       <EmptyListView />
       <View className="flex-row justify-between mt-4 gap-x-3">
@@ -33,6 +38,10 @@ export default function Accounts() {
           titleWidthClass={"w-[70%]"}
         />
       </View>
+      <AccountsCreationMoal
+        visible={openAccountCreationModal}
+        setVisible={setOpenAccountCreationModal}
+      />
     </View>
   );
 }
